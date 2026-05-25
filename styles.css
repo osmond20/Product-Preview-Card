@@ -79,12 +79,11 @@ h1 {
   transition: background-color 0.3s ease;
 }
 .addtocart img {
-  width: clamp(20px, 2vw, 25px);
-}
-@media (width >= 40rem) {
-  .addtocart img {
-    height: 25px;
-  }
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  display: block;
+  border-radius: 0;
 }
 
 .addtocart:hover {
