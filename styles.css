@@ -1,47 +1,45 @@
+:root {
+  --green-500: hsl(158, 36%, 37%);
+  --green-700: hsl(158, 42%, 18%);
+  --black:hsl(212, 21%, 14%);
+  --grey:hsl(228, 12%, 48%);
+  --cream:hsl(30, 38%, 92%);
+  --white:hsl(0, 0%, 100%);
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background-color: hsl(30, 38%, 92%);
+  background-color: var(--cream);
   font-family: "Montserrat", sans-serif;
-  color: hsl(228, 12%, 48%);
-  box-sizing: border-box;
+  color: var(--grey);
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .grid_parent {
   display: grid;
   border-radius: 10px;
-  grid-template-columns: 350px;
-  background-color: hsl(0, 0%, 100%);
+  grid-template-columns: 325px;
+  background-color: var(--white);
   padding-bottom: 40px;
-}
-@media (width >= 40rem) {
-  .grid_parent {
-    padding-bottom: 0rem;
-    grid-template-columns: repeat(2, 325px);
-    margin: 0rem;
-  }
 }
 
 img {
-  width: 350px;
+  width: 325px;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-}
-@media (width >= 40rem) {
-  img {
-    height: 100%;
-    width: 100%;
-    border-top-right-radius: 0rem;
-    border-end-start-radius: 5px;
-  }
 }
 
 h1 {
   font-family: "Fraunces", sans-serif;
-  color: hsl(212, 21%, 14%);
+  color: var(--black);
 }
 
 .grid-child2 {
@@ -58,7 +56,7 @@ h1 {
   gap: 10px;
 }
 .prices h1 {
-  color: hsl(158, 36%, 37%);
+  color: var(--green-500);
 }
 .prices p {
   text-decoration: line-through;
@@ -73,8 +71,8 @@ h1 {
   width: 100%;
   border: none;
   border-radius: 5px;
-  background-color: hsl(158, 36%, 37%);
-  color: hsl(0, 0%, 100%);
+  background-color: var(--green-500);
+  color: var(--white);
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   transition: background-color 0.3s ease;
@@ -88,11 +86,29 @@ h1 {
 }
 
 .addtocart:hover {
-  background-color: hsl(158, 42%, 18%);
+  background-color: var(--green-700);
   cursor: pointer;
 }
 
 .addtocart:focus {
   outline: 1px solid #111;
   outline-offset: 0.25rem;
+}
+
+@media (min-width: 40rem) {
+  body {
+    height: 100vh;
+    padding: 0;
+  }
+  .grid_parent {
+    padding-bottom: 0rem;
+    grid-template-columns: repeat(2, 325px);
+    margin: 0rem;
+  }
+  img {
+    height: 100%;
+    width: 100%;
+    border-top-right-radius: 0rem;
+    border-end-start-radius: 5px;
+  }
 }/*# sourceMappingURL=styles.css.map */
